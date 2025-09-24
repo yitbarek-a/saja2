@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --primary-color: #0056b3;
@@ -287,6 +286,310 @@
             text-align: center;
         }
         
+        /* Your Personal About Section */
+        .personal-about-section {
+            background: linear-gradient(135deg, #0a1929, #1a3a5f, #2c5364);
+            color: #fff;
+            padding: 80px 0;
+        }
+        
+        .personal-about-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        
+        .personal-profile-container {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .personal-profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #4fc3f7;
+            position: relative;
+            margin-bottom: 25px;
+            box-shadow: 0 0 25px rgba(79, 195, 247, 0.5);
+            transition: transform 0.5s ease;
+        }
+        
+        .personal-profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .personal-profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .personal-developer-name {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #4fc3f7, #29b6f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+        
+        .personal-developer-title {
+            font-size: 1.2rem;
+            color: #b0bec5;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .personal-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .personal-tag {
+            background: rgba(79, 195, 247, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(79, 195, 247, 0.3);
+        }
+        
+        .personal-social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .personal-social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #4fc3f7;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .personal-social-icon:hover {
+            background: #4fc3f7;
+            color: #0a1929;
+            transform: translateY(-3px);
+        }
+        
+        .personal-details-container {
+            flex: 2;
+            min-width: 300px;
+            padding: 20px;
+            z-index: 2;
+        }
+        
+        .personal-section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .personal-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #4fc3f7;
+            border-radius: 3px;
+        }
+        
+        .personal-bio {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+        }
+        
+        .personal-highlight {
+            color: #4fc3f7;
+            font-weight: 600;
+        }
+        
+        .personal-dual-background {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .personal-background-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        
+        .personal-background-card:hover {
+            transform: translateY(-5px);
+            background: rgba(79, 195, 247, 0.15);
+        }
+        
+        .personal-card-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .personal-card-title i {
+            color: #4fc3f7;
+        }
+        
+        .personal-skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .personal-skill-item {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .personal-skill-item:hover {
+            transform: translateY(-5px);
+            background: rgba(79, 195, 247, 0.2);
+        }
+        
+        .personal-skill-icon {
+            color: #4fc3f7;
+            font-size: 1.2rem;
+        }
+        
+        .personal-cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #4fc3f7, #29b6f6);
+            color: #0a1929;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(41, 182, 246, 0.4);
+        }
+        
+        .personal-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(41, 182, 246, 0.6);
+        }
+        
+        .personal-floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .personal-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(79, 195, 247, 0.1);
+        }
+        
+        .personal-shape-1 {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 5%;
+            animation: personal-float 15s infinite linear;
+        }
+        
+        .personal-shape-2 {
+            width: 120px;
+            height: 120px;
+            bottom: 10%;
+            right: 5%;
+            animation: personal-float 20s infinite linear reverse;
+        }
+        
+        .personal-shape-3 {
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            right: 10%;
+            animation: personal-float 12s infinite linear;
+        }
+        
+        @keyframes personal-float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(20px, 20px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .personal-about-container {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+            
+            .personal-profile-container, .personal-details-container {
+                width: 100%;
+            }
+            
+            .personal-profile-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .personal-dual-background {
+                flex-direction: column;
+            }
+        }
+        
         /* Footer */
         footer {
             background-color: var(--dark-color);
@@ -324,313 +627,6 @@
                 font-size: 1.5rem;
             }
         }
-        
-/* About Section Styles */
-.about-section {
-    background: linear-gradient(135deg, #0a1929, #1a3a5f, #2c5364);
-    color: #fff;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.developer-section {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.profile-container {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
-}
-
-.profile-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #4fc3f7;
-    position: relative;
-    margin-bottom: 25px;
-    box-shadow: 0 0 25px rgba(79, 195, 247, 0.5);
-    transition: transform 0.5s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.developer-name {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #4fc3f7, #29b6f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: 700;
-}
-
-.developer-title {
-    font-size: 1.2rem;
-    color: #b0bec5;
-    margin-bottom: 15px;
-    font-weight: 300;
-}
-
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.tag {
-    background: rgba(79, 195, 247, 0.2);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    border: 1px solid rgba(79, 195, 247, 0.3);
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    color: #4fc3f7;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background: #4fc3f7;
-    color: #0a1929;
-    transform: translateY(-3px);
-}
-
-.details-container {
-    flex: 2;
-    min-width: 300px;
-    padding: 20px;
-    z-index: 2;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: #4fc3f7;
-    border-radius: 3px;
-}
-
-.bio {
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: #e0e0e0;
-    font-size: 1.1rem;
-}
-
-.highlight {
-    color: #4fc3f7;
-    font-weight: 600;
-}
-
-.dual-background {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.background-card {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.background-card:hover {
-    transform: translateY(-5px);
-    background: rgba(79, 195, 247, 0.15);
-}
-
-.card-title {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.card-title i {
-    color: #4fc3f7;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.skill-item {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 12px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    background: rgba(79, 195, 247, 0.2);
-}
-
-.skill-icon {
-    color: #4fc3f7;
-    font-size: 1.2rem;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 30px;
-    background: linear-gradient(90deg, #4fc3f7, #29b6f6);
-    color: #0a1929;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(41, 182, 246, 0.4);
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(41, 182, 246, 0.6);
-}
-
-.floating-shapes {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(79, 195, 247, 0.1);
-}
-
-.shape-1 {
-    width: 80px;
-    height: 80px;
-    top: 10%;
-    left: 5%;
-    animation: float 15s infinite linear;
-}
-
-.shape-2 {
-    width: 120px;
-    height: 120px;
-    bottom: 10%;
-    right: 5%;
-    animation: float 20s infinite linear reverse;
-}
-
-.shape-3 {
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    right: 10%;
-    animation: float 12s infinite linear;
-}
-
-@keyframes float {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-        transform: translate(20px, 20px) rotate(180deg);
-    }
-    100% {
-        transform: translate(0, 0) rotate(360deg);
-    }
-}
-
-@media (max-width: 768px) {
-    .developer-section {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-    
-    .profile-container, .details-container {
-        width: 100%;
-    }
-    
-    .profile-image {
-        width: 180px;
-        height: 180px;
-    }
-    
-    .dual-background {
-        flex-direction: column;
-    }
-}
-
     </style>
 </head>
 <body>
@@ -1178,34 +1174,148 @@
         </div>
     </section>
 
-    <script>
-// Simple animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const profileImage = document.querySelector('.profile-image');
-    const skillItems = document.querySelectorAll('.skill-item');
-    const backgroundCards = document.querySelectorAll('.background-card');
-    
-    // Add animation delay to skill items
-    skillItems.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 0.1}s`;
-    });
-    
-    // Add animation delay to background cards
-    backgroundCards.forEach((card, index) => {
-        card.style.transitionDelay = `${index * 0.2}s`;
-    });
-    
-    // Add subtle floating animation to profile image
-    function floatImage() {
-        if (profileImage) {
-            profileImage.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 5}px)`;
-            requestAnimationFrame(floatImage);
-        }
-    }
-    
-    floatImage();
-});
-</script>
+    <!-- Your Personal About Section -->
+    <section class="personal-about-section">
+        <div class="container">
+            <div class="personal-about-container">
+                <div class="personal-floating-shapes">
+                    <div class="personal-shape personal-shape-1"></div>
+                    <div class="personal-shape personal-shape-2"></div>
+                    <div class="personal-shape personal-shape-3"></div>
+                </div>
+                
+                <div class="personal-profile-container">
+                    <div class="personal-profile-image">
+                        <!-- Replace with your actual image path -->
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Professional Photo">
+                    </div>
+                    <h1 class="personal-developer-name">Dr. Alex Johnson</h1>
+                    <p class="personal-developer-title">Medical Doctor & Full-Stack Developer</p>
+                    
+                    <div class="personal-tag-container">
+                        <span class="personal-tag">International Medical Graduate</span>
+                        <span class="personal-tag">Longevity Expert</span>
+                        <span class="personal-tag">AI Enthusiast</span>
+                        <span class="personal-tag">Researcher</span>
+                        <span class="personal-tag">Volunteer</span>
+                    </div>
+                    
+                    <div class="personal-social-links">
+                        <a href="#" class="personal-social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="personal-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="personal-social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="personal-social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="personal-social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    
+                    <a href="#contact" class="personal-cta-button">Get In Touch</a>
+                </div>
+                
+                <div class="personal-details-container">
+                    <h2 class="personal-section-title">About Me</h2>
+                    <p class="personal-bio">
+                        I'm a unique professional with a dual background in <span class="personal-highlight">medicine</span> and <span class="personal-highlight">technology</span>. 
+                        As an International Medical Graduate with 2 years of clinical experience, I bring a deep understanding of healthcare challenges 
+                        and patient needs. At the same time, I'm a passionate <span class="personal-highlight">full-stack developer</span> with over 5 years of experience creating digital solutions 
+                        that blend innovative design with robust functionality.
+                    </p>
+                    
+                    <p class="personal-bio">
+                        My expertise spans both <span class="personal-highlight">front-end and back-end technologies</span>, allowing me to build complete, scalable web applications from concept to deployment. 
+                        I specialize in <span class="personal-highlight">React, Node.js, and cloud architecture</span>, with a strong focus on creating intuitive user experiences. 
+                        My medical background gives me unique insight into developing health tech solutions that truly meet clinical needs.
+                    </p>
+                    
+                    <p class="personal-bio">
+                        When I'm not coding or seeing patients, you can find me contributing to <span class="personal-highlight">open-source health tech projects</span>, 
+                        writing about the intersection of medicine and technology, or exploring the latest trends in <span class="personal-highlight">AI applications for healthcare</span>.
+                    </p>
+                    
+                    <div class="personal-dual-background">
+                        <div class="personal-background-card">
+                            <h3 class="personal-card-title"><i class="fas fa-user-md"></i> Medical Background</h3>
+                            <ul>
+                                <li>International Medical Graduate</li>
+                                <li>2 Years Clinical Experience</li>
+                                <li>Longevity Research</li>
+                                <li>Healthcare Innovation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="personal-background-card">
+                            <h3 class="personal-card-title"><i class="fas fa-code"></i> Technology Focus</h3>
+                            <ul>
+                                <li>5+ Years Full-Stack Development</li>
+                                <li>React & Node.js Specialist</li>
+                                <li>Cloud Architecture</li>
+                                <li>Health Tech Solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h2 class="personal-section-title">Technical Skills</h2>
+                    <div class="personal-skills-container">
+                        <div class="personal-skill-item">
+                            <i class="fab fa-react personal-skill-icon"></i>
+                            <span>React.js</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fab fa-node-js personal-skill-icon"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fab fa-js-square personal-skill-icon"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fab fa-python personal-skill-icon"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-database personal-skill-icon"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fab fa-aws personal-skill-icon"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fab fa-figma personal-skill-icon"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-mobile-alt personal-skill-icon"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-heartbeat personal-skill-icon"></i>
+                            <span>Health Tech</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-brain personal-skill-icon"></i>
+                            <span>Medical AI</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-clipboard-list personal-skill-icon"></i>
+                            <span>Clinical Research</span>
+                        </div>
+                        <div class="personal-skill-item">
+                            <i class="fas fa-dna personal-skill-icon"></i>
+                            <span>Bioinformatics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section class="developer-section">
+        <div class="container">
+            <p>Website developed by <strong>MedTech Solutions</strong> - Specialists in healthcare digital platforms</p>
+            <p class="small">Contact: info@medtechsolutions.com | +251 911 234 567</p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
@@ -1281,6 +1391,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             });
+        });
+
+        // Simple animation for personal about section
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImage = document.querySelector('.personal-profile-image');
+            const skillItems = document.querySelectorAll('.personal-skill-item');
+            const backgroundCards = document.querySelectorAll('.personal-background-card');
+            
+            // Add animation delay to skill items
+            skillItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+            
+            // Add animation delay to background cards
+            backgroundCards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.2}s`;
+            });
+            
+            // Add subtle floating animation to profile image
+            function floatImage() {
+                if (profileImage) {
+                    profileImage.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 5}px)`;
+                    requestAnimationFrame(floatImage);
+                }
+            }
+            
+            floatImage();
         });
     </script>
 </body>
