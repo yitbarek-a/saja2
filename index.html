@@ -57,7 +57,6 @@
         
         /* Hero Section */
         .hero-section {
-            /* REPLACE THIS BACKGROUND IMAGE */
             background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 123, 255, 0.8)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
@@ -89,67 +88,84 @@
             padding: 80px 0;
         }
         
-        /* Services Section */
+        /* Services Section - UPDATED WITH ICONS */
         .services-section {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
         
-        .service-thumbnail {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
             margin-bottom: 30px;
-            height: 250px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-thumbnail:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-thumbnail img {
-            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
-        .service-thumbnail:hover img {
-            transform: scale(1.05);
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .service-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
             color: white;
-            padding: 20px;
+            font-size: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
         }
         
-        /* Major Wards Section */
+        .service-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .service-card .amharic {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Major Wards Section - UPDATED FOR EQUAL SIZES */
         .wards-section {
             padding: 80px 0;
         }
         
         .ward-card {
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             transition: transform 0.3s;
+            height: 100%;
+            background: white;
         }
         
         .ward-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
         
         .ward-img {
             height: 200px;
             object-fit: cover;
+            width: 100%;
+        }
+        
+        .ward-content {
+            padding: 25px;
         }
         
         /* Board & Admin Sections */
@@ -206,39 +222,95 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        /* News Section */
+        /* News Section - UPDATED WITH ICONS */
         .news-section {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
         
         .news-card {
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-bottom: 30px;
             transition: transform 0.3s;
+            background: white;
+            height: 100%;
         }
         
         .news-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
         
-        .news-img {
-            height: 200px;
-            object-fit: cover;
+        .news-icon {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
         }
         
-        /* Schedule Section */
+        .news-icon.inauguration {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+        
+        .news-icon.blood-donation {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+        
+        .news-content {
+            padding: 25px;
+        }
+        
+        /* Schedule Section - UPDATED WITH BEAUTIFUL LAYOUT */
         .schedule-section {
             padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
         }
         
-        .schedule-table {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
+        .schedule-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .schedule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .schedule-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 20px;
+        }
+        
+        .schedule-info {
+            flex: 1;
+        }
+        
+        .schedule-day {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .schedule-time {
+            color: #666;
+            font-size: 0.9rem;
         }
         
         /* Feedback Section */
@@ -249,9 +321,9 @@
         
         .feedback-form {
             background-color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         /* Social Section */
@@ -305,7 +377,7 @@
             object-fit: cover;
             margin: 0 auto 20px;
             border: 5px solid var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .team-member h4 {
@@ -656,6 +728,16 @@
             .personal-dual-background {
                 flex-direction: column;
             }
+            
+            .schedule-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .schedule-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -731,14 +813,13 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <!-- REPLACE THIS IMAGE -->
                     <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Saja General Hospital" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - UPDATED WITH ICONS -->
     <section id="services" class="services-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -749,130 +830,120 @@
             <div class="row">
                 <!-- Emergency Services -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Emergency Department">
-                        <div class="service-overlay">
-                            <h4>ED - Adult Emergency Department</h4>
-                            <p class="amharic">ድንገተኛ ህክምና</p>
-                            <p>24/7 emergency care for adults with state-of-the-art facilities and experienced medical staff.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ambulance"></i>
                         </div>
+                        <h4>ED - Adult Emergency Department</h4>
+                        <span class="amharic">ድንገተኛ ህክምና</span>
+                        <p>24/7 emergency care for adults with state-of-the-art facilities and experienced medical staff.</p>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1584467735871-8db9ac8e5e3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Emergency Triage, Assessment and Treatment">
-                        <div class="service-overlay">
-                            <h4>ETAT - Emergency Triage, Assessment and Treatment</h4>
-                            <p class="amharic">የህፃናት ድንገተኛ ህክምና</p>
-                            <p>Specialized emergency care for children with rapid assessment and treatment protocols.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-baby"></i>
                         </div>
+                        <h4>ETAT - Emergency Triage, Assessment and Treatment</h4>
+                        <span class="amharic">የህፃናት ድንገተኛ ህክምና</span>
+                        <p>Specialized emergency care for children with rapid assessment and treatment protocols.</p>
                     </div>
                 </div>
                 
                 <!-- NICU -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1584467735871-8db9ac8e5e3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="NICU">
-                        <div class="service-overlay">
-                            <h4>NICU - Neonatal Intensive Care Unit</h4>
-                            <p class="amharic">የጨቅላ ሕፃናት ህክምና ክፍል</p>
-                            <p>Specialized care for newborns in critical condition with advanced life support systems.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-baby-carriage"></i>
                         </div>
+                        <h4>NICU - Neonatal Intensive Care Unit</h4>
+                        <span class="amharic">የጨቅላ ሕፃናት ህክምና ክፍል</span>
+                        <p>Specialized care for newborns in critical condition with advanced life support systems.</p>
                     </div>
                 </div>
                 
                 <!-- OBGYN Ward -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="OBGYN Ward">
-                        <div class="service-overlay">
-                            <h4>OBGYN Ward - Obstetrics and Gynecology Ward</h4>
-                            <p class="amharic">የማህፀንና ፅንስ ህክምና ክፍል</p>
-                            <p>Comprehensive care for women during pregnancy, childbirth, and gynecological conditions.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-female"></i>
                         </div>
+                        <h4>OBGYN Ward - Obstetrics and Gynecology Ward</h4>
+                        <span class="amharic">የማህፀንና ፅንስ ህክምና ክፍል</span>
+                        <p>Comprehensive care for women during pregnancy, childbirth, and gynecological conditions.</p>
                     </div>
                 </div>
                 
                 <!-- OPD -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="OPD">
-                        <div class="service-overlay">
-                            <h4>OPD - Outpatient Department</h4>
-                            <p class="amharic">የተመላላሽ ሕሙማን ህክምና ክፍል</p>
-                            <p>Includes Adult OPD, Pediatrics OPD, and specialized referral clinics (SRC, GRC, PRC, MRC).</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
                         </div>
+                        <h4>OPD - Outpatient Department</h4>
+                        <span class="amharic">የተመላላሽ ሕሙማን ህክምና ክፍል</span>
+                        <p>Includes Adult OPD, Pediatrics OPD, and specialized referral clinics (SRC, GRC, PRC, MRC).</p>
                     </div>
                 </div>
                 
                 <!-- Major OR -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Major Operation Room">
-                        <div class="service-overlay">
-                            <h4>Major OR - Operation Room</h4>
-                            <p class="amharic">የቀዶ ጥገና ክፍል</p>
-                            <p>Equipped for major surgical procedures with advanced technology and sterile environment.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-procedures"></i>
                         </div>
+                        <h4>Major OR - Operation Room</h4>
+                        <span class="amharic">የቀዶ ጥገና ክፍል</span>
+                        <p>Equipped for major surgical procedures with advanced technology and sterile environment.</p>
                     </div>
                 </div>
                 
                 <!-- Minor OR -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Minor Operation Room">
-                        <div class="service-overlay">
-                            <h4>Minor OR - Operation Room</h4>
-                            <p class="amharic">የመለስተኛ ቀዶ ጥገና ክፍል</p>
-                            <p>For minor surgical procedures and interventions.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
                         </div>
+                        <h4>Minor OR - Operation Room</h4>
+                        <span class="amharic">የመለስተኛ ቀዶ ጥገና ክፍል</span>
+                        <p>For minor surgical procedures and interventions.</p>
                     </div>
                 </div>
                 
                 <!-- Ophthalmology Clinic -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ophthalmology Clinic">
-                        <div class="service-overlay">
-                            <h4>Ophthalmology Clinic</h4>
-                            <p class="amharic">የዓይን ህክምና ክፍል</p>
-                            <p>Specialized eye care and vision services.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
                         </div>
+                        <h4>Ophthalmology Clinic</h4>
+                        <span class="amharic">የዓይን ህክምና ክፍል</span>
+                        <p>Specialized eye care and vision services.</p>
                     </div>
                 </div>
                 
                 <!-- Dental Clinic -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dental Clinic">
-                        <div class="service-overlay">
-                            <h4>Dental Clinic</h4>
-                            <p class="amharic">የጥርስ ህክምና ክፍል</p>
-                            <p>Comprehensive dental care and oral health services.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tooth"></i>
                         </div>
+                        <h4>Dental Clinic</h4>
+                        <span class="amharic">የጥርስ ህክምና ክፍል</span>
+                        <p>Comprehensive dental care and oral health services.</p>
                     </div>
                 </div>
                 
                 <!-- Psychiatry Clinic -->
                 <div class="col-md-4">
-                    <div class="service-thumbnail">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Psychiatry Clinic">
-                        <div class="service-overlay">
-                            <h4>Psychiatry Clinic</h4>
-                            <p class="amharic">የስነ አእምሮ ህክምና ክፍል</p>
-                            <p>Mental health services and psychiatric care.</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
                         </div>
+                        <h4>Psychiatry Clinic</h4>
+                        <span class="amharic">የስነ አእምሮ ህክምና ክፍል</span>
+                        <p>Mental health services and psychiatric care.</p>
                     </div>
                 </div>
             </div>
@@ -883,7 +954,7 @@
         </div>
     </section>
 
-    <!-- Major Wards Section -->
+    <!-- Major Wards Section - UPDATED FOR EQUAL SIZES -->
     <section id="wards" class="wards-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -892,50 +963,46 @@
             </div>
             
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-3">
                     <div class="ward-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="ward-img" alt="Medical Ward">
-                        <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="ward-img" alt="Medical Ward">
+                        <div class="ward-content">
                             <h4>Medical Ward</h4>
                             <p class="amharic">የአዋቂ ተኝቶ ህክምና ክፍል</p>
-                            <p>Comprehensive care for adults with medical conditions including diabetes, hypertension, respiratory diseases, and infectious diseases. Our medical ward features modern monitoring equipment and specialized nursing care.</p>
+                            <p>Comprehensive care for adults with medical conditions including diabetes, hypertension, respiratory diseases, and infectious diseases.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-3">
                     <div class="ward-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1584824486537-46f70c4029ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="ward-img" alt="Pediatrics Ward">
-                        <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1584824486537-46f70c4029ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="ward-img" alt="Pediatrics Ward">
+                        <div class="ward-content">
                             <h4>Pediatrics Ward</h4>
                             <p class="amharic">የህፃናት ተኝቶ ህክምና ክፍል</p>
-                            <p>Child-friendly environment for infants, children, and adolescents. Our pediatric specialists provide care for common childhood illnesses, infections, and chronic conditions with a focus on family-centered care.</p>
+                            <p>Child-friendly environment for infants, children, and adolescents with family-centered care approach.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-3">
                     <div class="ward-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="ward-img" alt="Surgical Ward">
-                        <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="ward-img" alt="Surgical Ward">
+                        <div class="ward-content">
                             <h4>Surgical Ward</h4>
                             <p class="amharic">የቀዶ ጥገና ህክምና ክፍል</p>
-                            <p>Post-operative care for patients recovering from various surgical procedures. Our surgical ward is equipped with advanced monitoring systems and staffed by experienced surgical nurses.</p>
+                            <p>Post-operative care for patients recovering from various surgical procedures with advanced monitoring systems.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-3">
                     <div class="ward-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="ward-img" alt="OBGYN Ward">
-                        <div class="p-4">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="ward-img" alt="OBGYN Ward">
+                        <div class="ward-content">
                             <h4>OBGYN Ward</h4>
                             <p class="amharic">የማህፀንና ፅንስ ህክምና ክፍል</p>
-                            <p>Specialized care for women during pregnancy, childbirth, and postpartum period. Our OBGYN ward also provides gynecological services in a comfortable and private environment.</p>
+                            <p>Specialized care for women during pregnancy, childbirth, and postpartum period in a comfortable environment.</p>
                         </div>
                     </div>
                 </div>
@@ -954,7 +1021,6 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="team-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pediatrics Department Head" class="team-photo">
                         <h4>Dr. Selamawit Bekele</h4>
                         <p class="position">Head of Pediatrics Ward</p>
@@ -964,7 +1030,6 @@
                 
                 <div class="col-md-3">
                     <div class="team-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Surgical Department Head" class="team-photo">
                         <h4>Dr. Michael Asrat</h4>
                         <p class="position">Head of Surgical Ward</p>
@@ -974,7 +1039,6 @@
                 
                 <div class="col-md-3">
                     <div class="team-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Medical Department Head" class="team-photo">
                         <h4>Dr. Aisha Mohammed</h4>
                         <p class="position">Head of Medical Ward</p>
@@ -984,7 +1048,6 @@
                 
                 <div class="col-md-3">
                     <div class="team-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="OBGYN Department Head" class="team-photo">
                         <h4>Dr. Helen Girma</h4>
                         <p class="position">Head of OBGYN Ward</p>
@@ -995,7 +1058,7 @@
         </div>
     </section>
 
-    <!-- Governing Board Section -->
+    <!-- Governing Board Section - FIXED CIRCULAR IMAGES -->
     <section id="board" class="board-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -1007,7 +1070,6 @@
                 <!-- Chairperson -->
                 <div class="col-md-4 mx-auto">
                     <div class="board-member chairperson">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Board Chairperson" class="member-photo">
                         <h4>Dr. Alemayehu Tekle</h4>
                         <p class="text-muted">Chairperson</p>
@@ -1020,7 +1082,6 @@
                 <!-- Other Board Members (4 members) -->
                 <div class="col-md-3">
                     <div class="board-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Board Member 1" class="member-photo">
                         <h4>Dr. Selamawit Bekele</h4>
                         <p class="text-muted">Board Member</p>
@@ -1030,7 +1091,6 @@
                 
                 <div class="col-md-3">
                     <div class="board-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Board Member 2" class="member-photo">
                         <h4>Mr. Michael Asrat</h4>
                         <p class="text-muted">Board Member</p>
@@ -1040,7 +1100,6 @@
                 
                 <div class="col-md-3">
                     <div class="board-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Board Member 3" class="member-photo">
                         <h4>Dr. Aisha Mohammed</h4>
                         <p class="text-muted">Board Member</p>
@@ -1050,7 +1109,6 @@
                 
                 <div class="col-md-3">
                     <div class="board-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Board Member 4" class="member-photo">
                         <h4>Mr. Daniel Tadesse</h4>
                         <p class="text-muted">Board Member</p>
@@ -1061,7 +1119,7 @@
         </div>
     </section>
 
-    <!-- Hospital Administrators Section -->
+    <!-- Hospital Administrators Section - FIXED CIRCULAR IMAGES -->
     <section class="admin-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -1072,7 +1130,6 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="admin-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CEO" class="admin-photo">
                         <h4>Dr. Samuel Kebede</h4>
                         <p class="text-muted">Chief Executive Officer</p>
@@ -1082,7 +1139,6 @@
                 
                 <div class="col-md-4">
                     <div class="admin-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CCO" class="admin-photo">
                         <h4>Dr. Meron Abebe</h4>
                         <p class="text-muted">Chief Clinical Officer</p>
@@ -1092,7 +1148,6 @@
                 
                 <div class="col-md-4">
                     <div class="admin-member">
-                        <!-- REPLACE THIS IMAGE -->
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="HR Director" class="admin-photo">
                         <h4>Ms. Helen Girma</h4>
                         <p class="text-muted">Human Resources Director</p>
@@ -1122,7 +1177,6 @@
                 </div>
                 
                 <div class="col-md-6 text-center">
-                    <!-- REPLACE THIS IMAGE -->
                     <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="LLMP Program Founder" class="founder-photo">
                     <p class="mt-3"><strong>Dr. Yohannes Tadesse</strong><br>Program Founder & Director</p>
                 </div>
@@ -1130,7 +1184,7 @@
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- News Section - UPDATED WITH ICONS -->
     <section id="news" class="news-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -1141,9 +1195,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="news-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="news-img" alt="Inauguration of Saja General Hospital">
-                        <div class="p-4">
+                        <div class="news-icon inauguration">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="news-content">
                             <h5>Inauguration of Saja General Hospital</h5>
                             <p class="text-muted">October 2025</p>
                             <p>We are proud to announce the inauguration of Saja General Hospital, upgrading our facilities to better serve the community with enhanced medical services and state-of-the-art equipment.</p>
@@ -1154,9 +1209,10 @@
                 
                 <div class="col-md-6">
                     <div class="news-card">
-                        <!-- REPLACE THIS IMAGE -->
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="news-img" alt="Blood Donation Campaign">
-                        <div class="p-4">
+                        <div class="news-icon blood-donation">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="news-content">
                             <h5>Blood Donation Campaign in September</h5>
                             <p class="text-muted">September 2025</p>
                             <p>Join our blood donation campaign to help save lives. The campaign will run throughout September with special events and incentives for donors.</p>
@@ -1168,7 +1224,7 @@
         </div>
     </section>
 
-    <!-- Schedule Section -->
+    <!-- Schedule Section - UPDATED WITH BEAUTIFUL LAYOUT -->
     <section class="schedule-section">
         <div class="container">
             <div class="text-center mb-5">
@@ -1176,63 +1232,102 @@
                 <p class="lead">Regular clinic hours for specialized consultations</p>
             </div>
             
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="schedule-table">
-                        <table class="table table-hover mb-0">
-                            <thead class="table-primary">
-                                <tr>
-                                    <th>Clinic</th>
-                                    <th>Days</th>
-                                    <th>Time</th>
-                                    <th>Location</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Surgical Referral Clinic (SRC)</td>
-                                    <td>Mondays</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>SRC, Room 13</td>
-                                </tr>
-                                <tr>
-                                    <td>Gynecologic Referral Clinic (GRC)</td>
-                                    <td>Tuesdays</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>GRC, Room 13</td>
-                                </tr>
-                                <tr>
-                                    <td>Pediatrics Referral Clinic (PRC)</td>
-                                    <td>Wednesdays</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>PRC, Room 13</td>
-                                </tr>
-                                <tr>
-                                    <td>Medical Referral Clinic (MRC)</td>
-                                    <td>Thursdays & Fridays</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>MRC, 13</td>
-                                </tr>
-                                <tr>
-                                    <td>Ophthalmology Clinic</td>
-                                    <td>Monday - Friday</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>Building D, Room 301</td>
-                                </tr>
-                                <tr>
-                                    <td>Dental Clinic</td>
-                                    <td>Monday - Friday</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>Building D, Room 302</td>
-                                </tr>
-                                <tr>
-                                    <td>Psychiatry Clinic</td>
-                                    <td>Monday - Friday</td>
-                                    <td>2:30-6:30 AM - 7:30-11:30 PM</td>
-                                    <td>Building E, Room 101</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Surgical Referral Clinic (SRC)</h5>
+                            <div class="schedule-day">Mondays</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">SRC, Room 13</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Gynecologic Referral Clinic (GRC)</h5>
+                            <div class="schedule-day">Tuesdays</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">GRC, Room 13</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Pediatrics Referral Clinic (PRC)</h5>
+                            <div class="schedule-day">Wednesdays</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">PRC, Room 13</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Medical Referral Clinic (MRC)</h5>
+                            <div class="schedule-day">Thursdays & Fridays</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">MRC, Room 13</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Ophthalmology Clinic</h5>
+                            <div class="schedule-day">Monday - Friday</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">Building D, Room 301</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Dental Clinic</h5>
+                            <div class="schedule-day">Monday - Friday</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">Building D, Room 302</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="schedule-card d-flex align-items-center">
+                        <div class="schedule-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="schedule-info">
+                            <h5>Psychiatry Clinic</h5>
+                            <div class="schedule-day">Monday - Friday</div>
+                            <div class="schedule-time">2:30-6:30 AM - 7:30-11:30 PM</div>
+                            <div class="schedule-location">Building E, Room 101</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1336,7 +1431,6 @@
                 
                 <div class="personal-profile-container">
                     <div class="personal-profile-image">
-                        <!-- REPLACE THIS IMAGE WITH YOUR PROFILE PHOTO -->
                         <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Professional Photo">
                     </div>
                     <h1 class="personal-developer-name">Dr. Alex Johnson</h1>
