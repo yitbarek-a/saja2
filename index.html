@@ -738,6 +738,148 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
+            .llmp-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.llmp-section h2 {
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+.llmp-section .lead {
+    color: #64748b;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+.program-component {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-left: 4px solid transparent;
+}
+.program-component:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left-color: #10b981;
+}
+.icon-holder {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+.icon-holder-primary {
+    background-color: #d1fae5;
+    color: #10b981;
+}
+.icon-holder-accent1 {
+    background-color: #dbeafe;
+    color: #3b82f6;
+}
+.icon-holder-accent2 {
+    background-color: #fef3c7;
+    color: #f59e0b;
+}
+.program-content h5 {
+    color: #0f172a;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+.program-content p {
+    color: #64748b;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.founder-section {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.founder-photo {
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+.founder-photo:hover {
+    transform: scale(1.03);
+}
+.founder-name {
+    color: #0f172a;
+    margin-top: 10px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.founder-title {
+    color: #64748b;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+@media (max-width: 992px) {
+    .llmp-section {
+        padding: 60px 0;
+    }
+    .llmp-section h2 {
+        font-size: 2.2rem;
+    }
+    .founder-section {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .program-component {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+    .icon-holder {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .llmp-section h2 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+    .llmp-section {
+        padding: 40px 0;
+    }
+}
         }
     </style>
 </head>
@@ -1164,14 +1306,45 @@
 <section id="llmp" class="llmp-section">
     <div class="container">
         <div class="row align-items-center">
+            <!-- Left Column: Title and Program Components -->
             <div class="col-lg-6">
                 <h2>
                     <i class="fas fa-leaf" style="color: #10b981; margin-right: 10px;"></i>
                     Longevity & Lifestyle Medicine Program (LLMP)
                 </h2>
                 <p class="lead">Center for Healthy Aging & Lifestyle Medicine</p>
-                <!-- ...components... -->
+                <!-- Program Component 1 -->
+                <div class="program-component">
+                    <div class="icon-holder icon-holder-primary">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="program-content">
+                        <h5>Personalized Preventive Care</h5>
+                        <p>Tailored health plans based on individual risk factors and genetics.</p>
+                    </div>
+                </div>
+                <!-- Program Component 2 -->
+                <div class="program-component">
+                    <div class="icon-holder icon-holder-accent1">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="program-content">
+                        <h5>Community & Patient Education</h5>
+                        <p>Workshops and resources for healthy living and disease prevention.</p>
+                    </div>
+                </div>
+                <!-- Program Component 3 -->
+                <div class="program-component">
+                    <div class="icon-holder icon-holder-accent2">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="program-content">
+                        <h5>Lifestyle-Based Disease Reversal</h5>
+                        <p>Evidence-based approaches to reverse chronic conditions through lifestyle changes.</p>
+                    </div>
+                </div>
             </div>
+            <!-- Right Column: Founder Section -->
             <div class="col-lg-6">
                 <div class="founder-section">
                     <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=600&q=80"
