@@ -724,180 +724,298 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
-            /* LLMP Section */
-.llmp-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.llmp-section h2 {
-    color: #0f172a;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 2.5rem;
-}
-
-.llmp-section .lead {
-    color: #64748b;
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    font-weight: 500;
-}
-
-.program-component {
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    background-color: white;
-    border-left: 4px solid transparent;
-}
-
-.program-component:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border-left-color: #10b981;
-}
-
-.icon-holder {
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 25px;
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
-.icon-holder-primary {
-    background-color: #d1fae5;
-    color: #10b981;
-}
-
-.icon-holder-accent1 {
-    background-color: #dbeafe;
-    color: #3b82f6;
-}
-
-.icon-holder-accent2 {
-    background-color: #fef3c7;
-    color: #f59e0b;
-}
-
-.program-content h5 {
-    color: #0f172a;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.program-content p {
-    color: #64748b;
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Founder Section - Consolidated */
-.founder-section {
-    background-color: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.founder-photo {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
-    margin: 0 auto 25px auto;
-    display: block;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.founder-photo:hover {
-    transform: scale(1.03);
-}
-
-.founder-info {
-    width: 100%;
-    text-align: center;
-}
-
-.founder-name {
-    color: #0f172a;
-    margin-top: 0;
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.founder-title {
-    color: #64748b;
-    font-size: 1.2rem;
-    margin-bottom: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
+            <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+        min-height: 100vh;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* LLMP Section */
     .llmp-section {
         padding: 60px 0;
+        background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        margin-top: 30px;
     }
+    
     .llmp-section h2 {
-        font-size: 2.2rem;
-    }
-    .founder-section {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .program-component {
-        flex-direction: column;
+        color: #0f172a;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 2.5rem;
         text-align: center;
-        padding: 25px 20px;
     }
+    
+    .llmp-section .lead {
+        color: #64748b;
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .program-component {
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        border-left: 4px solid transparent;
+    }
+    
+    .program-component:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        border-left-color: #10b981;
+    }
+    
     .icon-holder {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .llmp-section h2 {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
         font-size: 2rem;
+        flex-shrink: 0;
     }
-}
-
-@media (max-width: 576px) {
-    body {
-        padding: 10px;
+    
+    .icon-holder-primary {
+        background-color: #d1fae5;
+        color: #10b981;
     }
-    .llmp-section {
-        padding: 40px 0;
+    
+    .icon-holder-accent1 {
+        background-color: #dbeafe;
+        color: #3b82f6;
     }
+    
+    .icon-holder-accent2 {
+        background-color: #fef3c7;
+        color: #f59e0b;
+    }
+    
+    .program-content h5 {
+        color: #0f172a;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+    
+    .program-content p {
+        color: #64748b;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    /* Founder Section - Fixed */
     .founder-section {
-        padding: 30px 20px;
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
-}
-    </style>
+    
+    .founder-image-container {
+        width: 280px;
+        height: 280px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        margin-bottom: 30px;
+        transition: all 0.4s ease;
+        border: 5px solid #e0f2fe;
+    }
+    
+    .founder-image-container:hover {
+        transform: scale(1.03);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-color: #bae6fd;
+    }
+    
+    .founder-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .founder-image-container:hover .founder-photo {
+        transform: scale(1.05);
+    }
+    
+    .founder-info {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .founder-name-box {
+        background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+        color: white;
+        padding: 16px 25px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 15px rgba(14, 165, 233, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .founder-name-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .founder-name-box:hover::before {
+        left: 100%;
+    }
+    
+    .founder-name-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(14, 165, 233, 0.4);
+    }
+    
+    .founder-name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+    
+    .founder-title {
+        color: #64748b;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 12px 20px;
+        background-color: #f8fafc;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .llmp-section {
+            padding: 50px 0;
+        }
+        
+        .llmp-section h2 {
+            font-size: 2.2rem;
+        }
+        
+        .founder-section {
+            margin-top: 40px;
+        }
+        
+        .founder-image-container {
+            width: 250px;
+            height: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .program-component {
+            flex-direction: column;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        
+        .icon-holder {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        .llmp-section h2 {
+            font-size: 2rem;
+        }
+        
+        .founder-image-container {
+            width: 220px;
+            height: 220px;
+        }
+        
+        .founder-name {
+            font-size: 1.4rem;
+        }
+        
+        .founder-title {
+            font-size: 1.1rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        body {
+            padding: 15px;
+        }
+        
+        .llmp-section {
+            padding: 40px 0;
+        }
+        
+        .founder-section {
+            padding: 30px 20px;
+        }
+        
+        .founder-image-container {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px;
+    }
+    
+    @media (max-width: 992px) {
+        .col-lg-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+</style>
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -1321,15 +1439,15 @@
     <!-- LLMP Section -->
 <section id="llmp" class="llmp-section">
     <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Column: Title and Program Components -->
+        <h2>
+            <i class="fas fa-leaf" style="color: #10b981; margin-right: 10px;"></i>
+            Longevity & Lifestyle Medicine Program (LLMP)
+        </h2>
+        <p class="lead">Center for Healthy Aging & Lifestyle Medicine</p>
+        
+        <div class="row">
+            <!-- Left Column: Program Components -->
             <div class="col-lg-6">
-                <h2>
-                    <i class="fas fa-leaf" style="color: #10b981; margin-right: 10px;"></i>
-                    Longevity & Lifestyle Medicine Program (LLMP)
-                </h2>
-                <p class="lead">Center for Healthy Aging & Lifestyle Medicine</p>
-                
                 <!-- Program Component 1 -->
                 <div class="program-component">
                     <div class="icon-holder icon-holder-primary">
@@ -1367,9 +1485,15 @@
             <!-- Right Column: Founder Section -->
             <div class="col-lg-6">
                 <div class="founder-section">
-                    <img src="images/yitbarek1.jpg" alt="Program Founder" class="founder-photo">
+                    <div class="founder-image-container">
+                        <!-- Replace with your actual image -->
+                        <img src="images/yitbarek1.jpg" 
+                             alt="Dr. Yitbarek Alemu, MD" class="founder-photo">
+                    </div>
                     <div class="founder-info">
-                        <p class="founder-name">Dr. Yitbarek Alemu, MD.</p>
+                        <div class="founder-name-box">
+                            <p class="founder-name">Dr. Yitbarek Alemu, MD.</p>
+                        </div>
                         <p class="founder-title">Program Founder & Director</p>
                     </div>
                 </div>
@@ -1860,5 +1984,21 @@
             floatImage();
         });
     </script>
+    <script>
+    // Simple animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const founderSection = document.querySelector('.founder-section');
+        
+        // Add a slight fade-in effect
+        founderSection.style.opacity = '0';
+        founderSection.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            founderSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            founderSection.style.opacity = '1';
+            founderSection.style.transform = 'translateY(0)';
+        }, 300);
+    });
+</script>
 </body>
 </html>
