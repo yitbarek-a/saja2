@@ -207,20 +207,6 @@
             border: 5px solid var(--accent-color);
         }
         
-        /* LLMP Section */
-        .llmp-section {
-            padding: 80px 0;
-        }
-        
-        .founder-photo {
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin: 0 auto;
-            display: block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
         
         /* News Section - UPDATED WITH ICONS */
         .news-section {
@@ -738,7 +724,8 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
-            .llmp-section {
+            /* LLMP Section */
+.llmp-section {
     padding: 80px 0;
     background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
     max-width: 1200px;
@@ -746,18 +733,21 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
 .llmp-section h2 {
     color: #0f172a;
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 2.5rem;
 }
+
 .llmp-section .lead {
     color: #64748b;
     font-size: 1.25rem;
     margin-bottom: 40px;
     font-weight: 500;
 }
+
 .program-component {
     display: flex;
     align-items: center;
@@ -771,11 +761,13 @@
     background-color: white;
     border-left: 4px solid transparent;
 }
+
 .program-component:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border-left-color: #10b981;
 }
+
 .icon-holder {
     width: 80px;
     height: 80px;
@@ -787,30 +779,37 @@
     font-size: 2rem;
     flex-shrink: 0;
 }
+
 .icon-holder-primary {
     background-color: #d1fae5;
     color: #10b981;
 }
+
 .icon-holder-accent1 {
     background-color: #dbeafe;
     color: #3b82f6;
 }
+
 .icon-holder-accent2 {
     background-color: #fef3c7;
     color: #f59e0b;
 }
+
 .program-content h5 {
     color: #0f172a;
     font-weight: 600;
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
+
 .program-content p {
     color: #64748b;
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
 }
+
+/* Founder Section - Consolidated */
 .founder-section {
     background-color: white;
     padding: 40px 30px;
@@ -820,33 +819,46 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 .founder-photo {
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    margin-bottom: 25px;
     width: 100%;
     max-width: 320px;
     height: auto;
+    border-radius: 16px;
     object-fit: cover;
+    margin: 0 auto 25px auto;
+    display: block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
+
 .founder-photo:hover {
     transform: scale(1.03);
 }
+
+.founder-info {
+    width: 100%;
+    text-align: center;
+}
+
 .founder-name {
     color: #0f172a;
-    margin-top: 10px;
+    margin-top: 0;
     font-size: 1.7rem;
     font-weight: 700;
+    margin-bottom: 5px;
 }
+
 .founder-title {
     color: #64748b;
     font-size: 1.2rem;
     margin-bottom: 0;
 }
+
+/* Responsive Design */
 @media (max-width: 992px) {
     .llmp-section {
         padding: 60px 0;
@@ -858,6 +870,7 @@
         margin-top: 50px;
     }
 }
+
 @media (max-width: 768px) {
     .program-component {
         flex-direction: column;
@@ -872,6 +885,7 @@
         font-size: 2rem;
     }
 }
+
 @media (max-width: 576px) {
     body {
         padding: 10px;
@@ -879,45 +893,10 @@
     .llmp-section {
         padding: 40px 0;
     }
+    .founder-section {
+        padding: 30px 20px;
+    }
 }
-            .founder-section {
-    text-align: center; /* Ensures everything is centered */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center;
-    padding: 40px 30px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    height: 100%;
-}
-.founder-photo {
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-.founder-name {
-    color: #0f172a;
-    margin-top: 10px;
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin-bottom: 4px;
-    text-align: center;
-}
-.founder-title {
-    color: #64748b;
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    text-align: center;
-}
-        }
     </style>
 </head>
 <body>
@@ -1350,6 +1329,7 @@
                     Longevity & Lifestyle Medicine Program (LLMP)
                 </h2>
                 <p class="lead">Center for Healthy Aging & Lifestyle Medicine</p>
+                
                 <!-- Program Component 1 -->
                 <div class="program-component">
                     <div class="icon-holder icon-holder-primary">
@@ -1360,6 +1340,7 @@
                         <p>Tailored health plans based on individual risk factors and genetics.</p>
                     </div>
                 </div>
+                
                 <!-- Program Component 2 -->
                 <div class="program-component">
                     <div class="icon-holder icon-holder-accent1">
@@ -1370,6 +1351,7 @@
                         <p>Workshops and resources for healthy living and disease prevention.</p>
                     </div>
                 </div>
+                
                 <!-- Program Component 3 -->
                 <div class="program-component">
                     <div class="icon-holder icon-holder-accent2">
@@ -1381,19 +1363,21 @@
                     </div>
                 </div>
             </div>
+            
             <!-- Right Column: Founder Section -->
             <div class="col-lg-6">
                 <div class="founder-section">
-    <img src="images/yitbarek1.jpg"
-         alt="Program Founder" class="founder-photo">
-    <div class="founder-info">
-        <p class="founder-name">Dr. Yitbarek Alemu, MD.</p>
-        <p class="founder-title">Program Founder & Director</p>
-    </div>
-</div>
+                    <img src="images/yitbarek1.jpg" alt="Program Founder" class="founder-photo">
+                    <div class="founder-info">
+                        <p class="founder-name">Dr. Yitbarek Alemu, MD.</p>
+                        <p class="founder-title">Program Founder & Director</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</section>
+
 </section>
 
     <!-- News Section - UPDATED WITH ICONS -->
